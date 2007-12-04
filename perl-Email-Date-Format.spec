@@ -8,7 +8,7 @@ Version:    %{version}
 Release:    %{release}
 License:    GPL or Artistic
 Group:      Development/Perl
-Summary:    produce RFC 2822 date strings
+Summary:    Produce RFC 2822 date strings
 Url:        http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/Email/%{module}-%{up_version}.tar.gz
 BuildRequires:  perl(Test::More)
