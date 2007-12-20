@@ -14,6 +14,7 @@ Source:     http://www.cpan.org/modules/by-module/Email/%{module}-%{up_version}.
 BuildRequires:  perl(Test::More)
 BuildRequires:  perl(Time::Local)
 BuildArch:      noarch
+BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 This module provides a simple means for generating an RFC 2822 compliant
