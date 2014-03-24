@@ -1,10 +1,10 @@
 %define modname	Email-Date-Format
-%define modver	1.002
+%define modver 1.004
 
 Summary:	Produce RFC 2822 date strings
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	11
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -36,4 +36,5 @@ make test
 %doc Changes LICENSE README
 %{perl_vendorlib}/Email
 %{_mandir}/man3/*
+
 
