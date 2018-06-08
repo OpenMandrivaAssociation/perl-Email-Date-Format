@@ -4,14 +4,14 @@
 Summary:	Produce RFC 2822 date strings
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	3
+Release:	4
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Email/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
-BuildRequires: perl(Capture::Tiny)
+BuildRequires:	perl(Capture::Tiny)
 BuildRequires:	perl(Time::Local)
 BuildRequires:	perl-devel
 
