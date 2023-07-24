@@ -1,19 +1,20 @@
 %define modname	Email-Date-Format
-%define modver 1.005
 
 Summary:	Produce RFC 2822 date strings
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
+Version:	1.008
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Email/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Email/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Capture::Tiny)
 BuildRequires:	perl(Time::Local)
 BuildRequires:	perl-devel
+# Ease version scheme switching without an Epoch
+Obsoletes:	%{name} = 1.5.0-1
 
 %description
 This module provides a simple means for generating an RFC 2822 compliant
@@ -21,17 +22,17 @@ datetime string.  (In case you care, they're not RFC 822 dates, because they
 use a four digit year, which is not allowed in RFC 822.)
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
+perl Makefile.PL INSTALLDIRS=vendor
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 %check
 make test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes LICENSE README
